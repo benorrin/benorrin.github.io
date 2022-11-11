@@ -1,0 +1,31 @@
+domain: orrin.uk
+url: https://orrin.uk
+
+title: Ben Orrin
+logo: /assets/img/y00t-2729.png
+email: ben@orrin.uk
+description: Programmer, maker and blog writer. Full time tea drinker.
+favicon: true
+color-scheme: auto
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+navigation:
+  - name: Projects
+    icon: <i class="fa-solid fa-code"></i>
+    link: ./projects.html
+
+platforms:
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/benorrin
+  - name: LinkedIn
+    icon: <i class="fa-brands fa-linkedin"></i>
+    link: https://www.linkedin.com/in/ben-orrin-460681256/
+  - name: Email
+    icon: <i class="fa-solid fa-envelope"></i>
+    link: mailto:ben@orrin.uk
+
