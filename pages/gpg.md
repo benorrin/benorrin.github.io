@@ -1,7 +1,7 @@
 ---
-layout:page
-title:GPG
-permalink:/gpg
+layout: page
+title: GPG
+permalink: /gpg
 ---
 **Introduction to PGP Encryption: Safeguarding Your Digital Communication**
 
