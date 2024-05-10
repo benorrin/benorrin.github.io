@@ -3,11 +3,8 @@ layout: page
 title: GPG
 permalink: /gpg
 ---
-**Introduction to PGP Encryption: Safeguarding Your Digital Communication**
 
-In today's digital age, ensuring the security and privacy of our online communication has become paramount. With the ever-present threat of cyberattacks and data breaches, employing robust encryption methods is essential to protect sensitive information from falling into the wrong hands.
-
-In this context, PGP (Pretty Good Privacy) encryption emerges as a cornerstone of secure communication. PGP utilizes asymmetric encryption, where each user possesses a unique pair of keys: a public key for encryption and a private key for decryption. Today, I'm sharing my PGP public key, a crucial component in facilitating secure communication and preserving data integrity.
+If you would like to contact me by email (or any other method of communication, I highly recommend that you encrypt your plain text using my GPG key.
 
 **My PGP Public Key:**
 
