@@ -1,6 +1,7 @@
 ---
-layout:post
+layout: post
 title: "Discovering Emacs"
+published: true
 ---
 
 Over the past few weeks I have seen the light. I have been bitten by the bug of Free Software, and I have been converted to an Emacs purist - all completely by chance.
