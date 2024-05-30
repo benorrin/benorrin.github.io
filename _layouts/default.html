@@ -1,40 +1,42 @@
-{% case site.color-scheme %}
-  {% when "", nil, false, 0, empty %}
-    {% assign ColorScheme = "auto" %}
-  {% else %}
-    {% assign ColorScheme = site.color-scheme %}
-{% endcase %}
-
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link rel="preload" href="{{site.logo | relative_url}}" as="image">
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="sidebar">
-        <header>
-          {%- include header.html -%}
-        </header>
-        {% include mobile.html %}
-        <div class="sidebar-footer">
-          {%- include footer.html -%}
-        </div>
-      </div>
-      <section>
-      {{ content }}
-      </section>
-      <footer>
-        {%- include footer.html -%}
-      </footer>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="site-title">
+                <a href="/">
+                    {{ site.title }}
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+	        {{ content }}
+        </main>
+        <footer>
+            <img src="/assets/img/95pc.jpg" />
+            <!--
+            <nav>
+                <a href="https://taniarascia.substack.com" target="_blank" rel="noopener noreferrer">Newsletter</a>
+                <a href="https://ko-fi.com/taniarascia" target="_blank" rel="noopener noreferrer">Ko-Fi</a>
+                <a href="https://patreon.com/taniarascia" target="_blank" rel="noopener noreferrer">RSS</a>
+                <a href="https://www.taniarascia.com/rss.xml" target="_blank" rel="noopener noreferrer">Built to last</a>
+            </nav>
+            -->
+            <p>&copy; 2024 Ben Orrin</p>
+        </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+</body>
 </html>

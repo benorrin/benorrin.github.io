@@ -8,7 +8,12 @@ layout: default
 </div>
 
 <div class="key-info">
-    <p><a href="{{ page.source }}">Source Code</a></p>
+    <p><strong>Role:</strong></p>
+    <ul>
+        {% for role in page.roles %}
+            <li>{{ role }}</li>
+        {% endfor %}
+    </ul>
 
     <p><strong>Skills:</strong></p>
     <ul>

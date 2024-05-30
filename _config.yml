@@ -1,31 +1,18 @@
-domain: orrin.uk
-url: https://orrin.uk
-
 title: Ben Orrin
-logo: /assets/img/ben-orrin.jpeg
 email: ben@orrin.uk
-description: Programmer, maker and blog writer. Full time tea drinker.
-favicon: true
-color-scheme: auto
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jemoji
-
-navigation:
-  - name: Projects
-    icon: <i class="fa-solid fa-code"></i>
-    link: ./projects.html
-
-platforms:
-  - name: GitHub
-    icon: <i class="fa-brands fa-github"></i>
-    link: https://github.com/benorrin
-  - name: LinkedIn
-    icon: <i class="fa-brands fa-linkedin"></i>
-    link: https://www.linkedin.com/in/ben-orrin-460681256/
-  - name: Email
-    icon: <i class="fa-solid fa-envelope"></i>
-    link: mailto:ben@orrin.uk
-
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
