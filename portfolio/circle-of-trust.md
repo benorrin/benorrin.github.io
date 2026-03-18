@@ -3,7 +3,6 @@ layout: portfolio
 title: Circle of Trust
 image: circle-of-trust.jpg
 description: Developed a robust, scalable API framework and optimized AWS infrastructure for the Circle of Trust digital word-of-mouth application, enhancing performance and reliability.
-period: March 2023 - Current
 roles:
   - Backend Developer
   - Cloud Infrastructure

@@ -3,7 +3,6 @@ layout: portfolio
 title: Chorley Building Society
 image: chorley-building-society.jpg
 description: Optimized AWS infrastructure and customized Umbraco CMS to deliver a scalable, reliable, and modernized website for Chorley Building Society.
-period: October 2023 - Current
 roles:
   - Backend Developer
   - Cloud Infrastructure

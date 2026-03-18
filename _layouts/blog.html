@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<h1 style="margin-top: 0;">Blog</h1>
+<p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 3rem;">
+    Thoughts on software development, DevOps, and technology.
+</p>
+
+{% if site.posts.size > 0 %}
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+        {% for post in site.posts %}
+        <article class="card" style="border-left: 4px solid var(--primary); padding-left: 1.5rem;">
+            <h2 style="margin-top: 0; margin-bottom: 0.5rem;">
+                <a href="{{ post.url }}" style="color: var(--primary);">{{ post.title }}</a>
+            </h2>
+            
+            <div class="post-meta">
+                {% assign d = post.date | date: "%-d" %}
+                {% case d %}
+                    {% when '1' or '21' or '31' %}{{ d }}st
+                    {% when '2' or '22' %}{{ d }}nd
+                    {% when '3' or '23' %}{{ d }}rd
+                    {% else %}{{ d }}th
+                {% endcase %}
+                {{ post.date | date: "%B %Y" }}
+                
+                {% if post.categories %}
+                <span style="margin-left: 1rem;">
+                    {% for category in post.categories %}
+                        <span class="post-tag">{{ category }}</span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+            
+            {% if post.excerpt %}
+                <p>{{ post.excerpt }}</p>
+            {% else %}
+                <p>{{ post.content | truncatewords: 40 }}</p>
+            {% endif %}
+            
+            <a href="{{ post.url }}" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Read Article →</a>
+        </article>
+        {% endfor %}
+    </div>
+{% else %}
+    <div style="text-align: center; padding: 3rem 0; color: var(--text-light);">
+        <p>No blog posts yet. Check back soon!</p>
+        </div>
+    {% endif %}
+</div>

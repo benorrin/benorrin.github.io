@@ -1,14 +1,59 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
 
-{{ page.date | date: "%-d" }}{% case page.date | date: "%-d" %}{% when '1' %}st{% when '2' %}nd{% when '3' %}rd{% else %}th{% endcase %} {{ page.date | date: "%B %Y" }}
+<article>
+    <h1 style="margin-top: 0;">{{ page.title }}</h1>
+    
+    <div class="post-meta" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+        <span>
+            {% assign d = page.date | date: "%-d" %}
+            {% case d %}
+                {% when '1' or '21' or '31' %}{{ d }}st
+                {% when '2' or '22' %}{{ d }}nd
+                {% when '3' or '23' %}{{ d }}rd
+                {% else %}{{ d }}th
+            {% endcase %}
+            {{ page.date | date: "%B %Y" }}
+        </span>
+        
+        {% if page.categories %}
+        <div style="margin-top: 0.5rem;">
+            {% for category in page.categories %}
+                <span class="post-tag">{{ category }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 
-<hr />
+    {% if page.image %}
+    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md);">
+        <img src="/assets/img/{{ page.image }}" alt="Post featured image" style="width: 100%; height: auto; display: block;">
+    </div>
+    {% endif %}
 
-{% if page.image %}
-  <img src="/assets/img/{{ page.image }}" {% if page.imagedesc %} alt="Post Image" {% endif %}>
-{% endif %}
+    <div style="line-height: 1.8; color: var(--text-secondary);">
+        {{ content }}
+    </div>
 
-{{ content }}
+    <hr style="margin: 3rem 0;">
+
+    {% if site.posts.size > 1 %}
+    <nav style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <div>
+            {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    ← {{ page.previous.title | truncatewords: 5 }}
+                </a>
+            {% endif %}
+        </div>
+        <div>
+            {% if page.next %}
+                <a href="{{ page.next.url }}" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    {{ page.next.title | truncatewords: 5 }} →
+                </a>
+            {% endif %}
+        </div>
+    </nav>
+    {% endif %}
+</article>

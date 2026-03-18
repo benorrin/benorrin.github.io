@@ -1,21 +1,42 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
 
-<div class="portfolio-period">
-    {{ page.period }}
-</div>
+<article>
+    <h1 style="margin-top: 0;">{{ page.title }}</h1>
 
-<div class="key-info">
-    <p><a href="{{ page.source }}">Source Code</a></p>
+    {% if page.period %}
+    <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        <strong>Period:</strong> {{ page.period }}
+    </div>
+    {% endif %}
 
-    <p><strong>Skills:</strong></p>
-    <ul>
-        {% for skill in page.skills %}
-            <li>{{ skill }}</li>
-        {% endfor %}
-    </ul>
-</div>
+    <div style="margin: 2rem 0; padding: 1.5rem; background-color: var(--bg-light); border-left: 4px solid var(--primary); border-radius: 4px;">
+        {% if page.source %}
+        <p style="margin: 0 0 1rem 0;">
+            <a href="{{ page.source }}" target="_blank" rel="noopener noreferrer" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">View Source Code</a>
+        </p>
+        {% endif %}
 
-{{ content }}
+        {% if page.skills %}
+        <div>
+            <p style="margin-top: 0; color: var(--text-light); font-size: 0.9rem;"><strong>Skills & Technologies</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                {% for skill in page.skills %}
+                    <span class="post-tag">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div style="line-height: 1.8; color: var(--text-secondary); margin: 2rem 0;">
+        {{ content }}
+    </div>
+
+    <hr style="margin: 3rem 0;">
+
+    <div style="text-align: center;">
+        <a href="/projects" class="btn btn-outline">← Back to Projects</a>
+    </div>
+</article>
