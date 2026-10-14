@@ -1,33 +1,34 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
-description: Software engineer in Brighton, working in C#/.NET with a background in platform engineering.
+headline: Hi, I'm Ben.
+lead: I'm a software engineer in Brighton. I write C# for a living, and I've also spent time on the platform side, working on cloud infrastructure, pipelines and monitoring.
+description: Ben Orrin is a software engineer in Brighton, working in C#/.NET with a background in platform engineering.
 ---
 
-I'm Ben, a software engineer based in Brighton, where the sea is close enough that I'm on a paddleboard whenever the weather allows (and sometimes when it doesn't).
+## What I do
 
-Right now I'm a C# developer at NETbuilder, building .NET software for Aviva. Before that I was a platform engineer at Ground Control, turning ad-hoc cloud environments into a well-architected platform with infrastructure as code, CI/CD pipelines and Grafana-based observability. And before *that* I was a backend developer at Radical Company, building APIs and running AWS infrastructure for clients such as [Lloyds Bank](/portfolio/lloyds-working-capital-management.html), where I helped cut infrastructure spend by more than 90%.
+I'm currently a C# developer at NETbuilder, working on software for Aviva.
 
-## What I bring
+Before that I spent a year as a platform engineer at Ground Control. I helped move ad-hoc cloud environments onto infrastructure as code, built containerised CI/CD pipelines and set up Grafana monitoring. Before that I spent two years as a backend developer at Radical Company, building APIs and looking after AWS infrastructure for clients including [Lloyds Bank](/portfolio/lloyds-working-capital-management.html).
 
-Most engineers sit on one side of the fence: they write the application, or they run the platform it lives on. I've done both, and I think it makes me better at each.
+{% include devops-loop.html %}
 
-* **As a developer**, I write code with deployment, observability and cost in mind, because I've built and run the platforms it lands on.
-* **As a platform engineer**, I build tooling that developers actually want to use, because I know what it's like to wait on a ticket to get something shipped.
+Doing both jobs has been useful in each. When I write application code, I think about how it will be deployed, monitored and paid for. When I work on a platform, I think about the developers who have to use it. I'm happy working in C#, Rust, Go or Python, and I like seeing a piece of work through from design to production.
 
-I'm comfortable dropping into a codebase, whether it's C#, Rust, Go or something else, and I enjoy owning a problem from first principles through to something that runs reliably in production. I've worked in startups and in regulated financial environments, from wrangling legacy systems into something modern and maintainable to building internal tooling that removes friction for the rest of the team.
+## Background
 
-## How I got here
-
-I didn't take the traditional route. I spent five years working full time while studying part-time for a BSc in Computing & IT with The Open University, which I finished with a 2:1. It taught me to be self-directed, and it's why I still learn best by building things.
+I came into software through The Open University. I studied Computing & IT part-time while working full time, and graduated with a 2:1.
 
 ## Outside work
 
-I run a homelab at home, self-hosting services and tinkering with infrastructure for fun. I also build open-source software in my spare time: tools like [Geekoffee](/projects/geekoffee.html), a self-hosted fitness tracker called [OpenIron](/projects/openiron.html), and [OpenFive](/projects/openfive.html), which brings a 1999 adventure game back to life on modern computers. These are the kinds of projects that exist because I wanted them to exist.
+Most of my side projects start in my homelab, where I self-host services and try out infrastructure ideas. A few recent ones:
 
-I'm a big music fan and I like to keep active. I believe good infrastructure, like a good setlist, should be so well put together that nobody notices the effort that went into it.
+{% include about-projects.html %}
+
+Away from the keyboard I'm usually on a paddleboard when the sea allows, in the gym, or listening to music.
 
 ## Get in touch
 
-I'm always happy to hear about interesting work, remote or hybrid around Brighton and London. The best way to reach me is [email](mailto:ben@orrin.uk) or [LinkedIn](https://www.linkedin.com/in/ben-orrin). You can also see [my experience](/experience/) or [what I've built](/projects/).
+The easiest way to reach me is by [email](mailto:ben@orrin.uk) or on [LinkedIn](https://www.linkedin.com/in/ben-orrin). There's more detail on my [experience page](/experience/).

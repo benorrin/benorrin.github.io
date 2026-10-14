@@ -5,6 +5,7 @@ description: A self-hosted workout and body-metrics tracker for people who lift,
 period: 2026
 date: 2026-03-17
 status: In progress
+image: openiron.svg
 skills:
  - Go
  - Gin

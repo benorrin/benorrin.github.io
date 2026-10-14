@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{%- assign current = site.data.experience | where: "current", true | first -%}
+
+<header class="page-header">
+    <p class="eyebrow">About</p>
+    <h1>{{ page.headline | default: page.title }}</h1>
+    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+</header>
+
+<div class="about">
+    <div class="prose about-prose">
+        {{ content }}
+    </div>
+
+    <aside class="about-side">
+        <div class="profile-card reveal">
+            <img src="/assets/img/ben-orrin.jpg" alt="Ben Orrin" width="500" height="500">
+            <dl class="profile-facts">
+                <div><dt>Based in</dt><dd>{{ site.location }}</dd></div>
+                {% if current %}<div><dt>Now</dt><dd>{{ current.role }}, {{ current.company }}</dd></div>{% endif %}
+                <div><dt>Writes</dt><dd>C#, Rust, Go, Python</dd></div>
+                <div><dt>Studied</dt><dd>BSc Computing &amp; IT, The Open University</dd></div>
+            </dl>
+            <div class="profile-links">
+                <a href="mailto:{{ site.email }}" class="btn btn-sm">Email</a>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LinkedIn</a>
+                <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+        </div>
+    </aside>
+</div>

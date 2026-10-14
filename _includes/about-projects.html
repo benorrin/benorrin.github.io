@@ -1,0 +1,18 @@
+{% assign picks = "openfive,geekoffee,openiron" | split: "," %}
+<div class="mini-cards">
+    {% for name in picks %}
+    {% assign path = "projects/" | append: name | append: ".md" %}
+    {% assign p = site.pages | where: "path", path | first %}
+    {% if p %}
+    <a class="mini-card reveal" href="{{ p.url }}">
+        <span class="mini-thumb{% if p.image contains '.svg' %} is-icon{% endif %}">
+            {% if p.image %}<img src="/assets/img/{{ p.image }}" alt="" loading="lazy">{% else %}<span>{{ p.title | slice: 0, 2 }}</span>{% endif %}
+        </span>
+        <span class="mini-text">
+            <strong>{{ p.title }}</strong>
+            <span>{{ p.skills | slice: 0, 2 | join: " · " }}</span>
+        </span>
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,41 @@
+<figure class="loop reveal">
+    <svg class="loop-svg" viewBox="20 28 560 196" role="img" aria-labelledby="loop-title loop-desc">
+        <title id="loop-title">The DevOps loop</title>
+        <desc id="loop-desc">An infinity loop. The left half covers code, build and test, where I've worked as a developer at NETbuilder and Radical. The right half covers deploy, run and monitor, where I've worked as a platform engineer at Ground Control and on AWS at Radical.</desc>
+        <defs>
+            <path id="loop-path" d="M300 125 C 345 55, 500 40, 500 125 C 500 210, 345 195, 300 125 C 255 55, 100 40, 100 125 C 100 210, 255 195, 300 125 Z"/>
+            <radialGradient id="loop-dot-glow">
+                <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.55"/>
+                <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0"/>
+            </radialGradient>
+        </defs>
+
+        <path class="loop-track" d="M300 125 C 255 55, 100 40, 100 125 C 100 210, 255 195, 300 125"/>
+        <path class="loop-track loop-track-ops" d="M300 125 C 345 55, 500 40, 500 125 C 500 210, 345 195, 300 125"/>
+
+        <text class="loop-half" x="196" y="121">Dev</text>
+        <text class="loop-half-sub" x="196" y="141">NETbuilder · Radical</text>
+        <text class="loop-half loop-half-ops" x="404" y="121">Ops</text>
+        <text class="loop-half-sub" x="404" y="141">Ground Control · Radical</text>
+
+        <g class="loop-stage">
+            <circle cx="170" cy="70" r="4"/><text x="170" y="52">Code</text>
+            <circle cx="100" cy="125" r="4"/><text x="88" y="130" text-anchor="end">Build</text>
+            <circle cx="170" cy="180" r="4"/><text x="170" y="208">Test</text>
+        </g>
+        <g class="loop-stage loop-stage-ops">
+            <circle cx="430" cy="70" r="4"/><text x="430" y="52">Deploy</text>
+            <circle cx="500" cy="125" r="4"/><text x="512" y="130" text-anchor="start">Run</text>
+            <circle cx="430" cy="180" r="4"/><text x="430" y="208">Monitor</text>
+        </g>
+
+        <g class="loop-dot">
+            <circle r="18" fill="url(#loop-dot-glow)"/>
+            <circle r="6.5"/>
+            <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#loop-path"/>
+            </animateMotion>
+        </g>
+    </svg>
+    <figcaption>I've worked on both halves of the loop: writing the code, and running the platform it ships to.</figcaption>
+</figure>
