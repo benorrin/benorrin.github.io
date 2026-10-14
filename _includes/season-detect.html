@@ -1,0 +1,51 @@
+<script>
+    // Seasonal decorations: work out today's season before first paint.
+    // Preview any season with ?season=halloween (or bonfire, christmas, newyear,
+    // valentines, easter, pride); ?season=auto goes back to the calendar.
+    (() => {
+        const SEASONS = ['halloween', 'bonfire', 'christmas', 'newyear', 'valentines', 'easter', 'pride'];
+        const now = new Date();
+        const y = now.getFullYear();
+        const today = new Date(y, now.getMonth(), now.getDate());
+        const on = (m, d) => new Date(y, m - 1, d);
+        const within = (from, to) => today >= from && today <= to;
+        const addDays = (date, n) => new Date(date.getFullYear(), date.getMonth(), date.getDate() + n);
+
+        // Easter Sunday (Meeus/Jones/Butcher algorithm)
+        const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4;
+        const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
+        const h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4;
+        const l = (32 + 2 * e + 2 * i - h - k) % 7, mm = Math.floor((a + 11 * h + 22 * l) / 451);
+        const easter = on(Math.floor((h + l - 7 * mm + 114) / 31), ((h + l - 7 * mm + 114) % 31) + 1);
+
+        // Brighton Pride: the first weekend of August
+        const prideSat = on(8, 1 + ((6 - on(8, 1).getDay() + 7) % 7));
+
+        let season = '';
+        if (within(on(12, 31), on(12, 31)) || within(on(1, 1), on(1, 2))) season = 'newyear';
+        else if (within(on(2, 14), on(2, 14))) season = 'valentines';
+        else if (within(addDays(easter, -2), addDays(easter, 1))) season = 'easter';
+        else if (within(addDays(prideSat, -1), addDays(prideSat, 1))) season = 'pride';
+        else if (now.getMonth() === 9) season = 'halloween';
+        else if (within(on(11, 1), on(11, 6))) season = 'bonfire';
+        else if (within(on(12, 1), on(12, 30))) season = 'christmas';
+
+        const root = document.documentElement;
+        let applied = season;
+        try {
+            const param = new URLSearchParams(location.search).get('season');
+            if (param === 'auto') sessionStorage.removeItem('season-preview');
+            else if (param && (param === 'off' || SEASONS.includes(param))) sessionStorage.setItem('season-preview', param);
+            const preview = sessionStorage.getItem('season-preview');
+            if (preview) {
+                applied = preview === 'off' ? '' : preview;
+                root.dataset.seasonPreview = '';
+            } else if (localStorage.getItem('seasonal') === 'off') {
+                applied = '';
+            }
+        } catch (err) {}
+
+        if (season) root.dataset.seasonToday = season;
+        if (applied) root.dataset.season = applied;
+    })();
+</script>
