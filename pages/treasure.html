@@ -1,0 +1,116 @@
+---
+layout: page
+title: Sea glass hunt
+permalink: /treasure/
+sitemap: false
+description: Eight pieces of sea glass have washed up around this site. Find them all to claim a prize. Your finds are kept in this browser only.
+---
+
+<div class="treasure">
+    <div class="treasure-progress">
+        <span class="treasure-count">0 / {{ site.data.seaglass.size }}</span>
+        <div class="treasure-bar"><span></span></div>
+    </div>
+
+    <div class="treasure-prize">
+        <h2>You found them all!</h2>
+        <p class="chest-prompt">All eight pieces of sea glass led you here, to a chest washed up on the shore. Go on, open it.</p>
+
+        {%- assign offsets = "-96,-70,-25|-70,-112,20|-42,-84,-40|-14,-128,10|14,-96,35|42,-132,-15|70,-104,30|96,-72,-20" | split: "|" %}
+        <button class="chest" type="button" aria-label="Open the treasure chest">
+            <svg viewBox="0 0 240 200" aria-hidden="true">
+                <defs>
+                    <radialGradient id="chest-glow-fill">
+                        <stop offset="0" stop-color="#fff3c4"/>
+                        <stop offset="0.5" stop-color="#ffd166" stop-opacity="0.6"/>
+                        <stop offset="1" stop-color="#ffd166" stop-opacity="0"/>
+                    </radialGradient>
+                    <clipPath id="chest-lid-shape">
+                        <path d="M40 97 V72 Q40 40 120 40 Q200 40 200 72 V97 Z"/>
+                    </clipPath>
+                </defs>
+                <ellipse class="chest-glow" cx="120" cy="90" rx="110" ry="80" fill="url(#chest-glow-fill)"/>
+                <g class="chest-lid">
+                    <path d="M40 97 V72 Q40 40 120 40 Q200 40 200 72 V97 Z" fill="#9c6631"/>
+                    <g clip-path="url(#chest-lid-shape)">
+                        <rect x="58" y="30" width="14" height="70" fill="#e0a73a"/>
+                        <rect x="168" y="30" width="14" height="70" fill="#e0a73a"/>
+                        <path d="M40 60 Q120 34 200 60" fill="none" stroke="#b77a3e" stroke-width="3" opacity="0.6"/>
+                    </g>
+                    <rect x="40" y="89" width="160" height="8" fill="#6e4420"/>
+                    <rect x="110" y="84" width="20" height="14" rx="3" fill="#f2c14e" stroke="#b07d1e" stroke-width="2"/>
+                </g>
+                {%- for glass in site.data.seaglass %}
+                {%- assign o = offsets[forloop.index0] | split: "," %}
+                <g class="chest-loot" style="--x: {{ o[0] }}px; --y: {{ o[1] }}px; --r: {{ o[2] }}deg; --d: {{ forloop.index0 | times: 60 }}ms">
+                    <path transform="translate(110 112) scale(1.25)" fill="{{ glass.colour }}" d="M3 5.5 7.5 2 13.5 4 14.5 10 9.5 14.5 3.5 12.5Z"/>
+                </g>
+                {%- endfor %}
+                <g class="chest-body">
+                    <rect x="40" y="95" width="160" height="85" rx="6" fill="#8b5a2b"/>
+                    <rect x="40" y="95" width="160" height="10" fill="#5e3a19"/>
+                    <rect x="40" y="170" width="160" height="10" rx="3" fill="#6e4420"/>
+                    <rect x="58" y="95" width="14" height="85" fill="#e0a73a"/>
+                    <rect x="168" y="95" width="14" height="85" fill="#e0a73a"/>
+                    <rect x="106" y="102" width="28" height="30" rx="4" fill="#f2c14e" stroke="#b07d1e" stroke-width="2"/>
+                    <circle cx="120" cy="113" r="4" fill="#3a2a10"/>
+                    <rect x="118.5" y="115" width="3" height="9" rx="1" fill="#3a2a10"/>
+                </g>
+            </svg>
+        </button>
+
+        <div class="treasure-reward" role="status">
+            <p>Inside, among your sea glass, is your prize: a genuine 88×31 button to put on your own site. Wear it with pride.</p>
+            <img src="/assets/img/seaglass-hunter-88x31.png" width="88" height="31" alt="Sea glass hunter, orrin.uk" class="pixel">
+            <p><a href="/assets/img/seaglass-hunter-88x31.png" download>Download the button</a> · <a href="mailto:ben@orrin.uk?subject=I%20found%20all%20the%20sea%20glass">Tell me you did it</a></p>
+        </div>
+    </div>
+
+    <ul class="treasure-grid">
+    {%- for glass in site.data.seaglass %}
+        <li data-glass="{{ glass.id }}" style="--glass: {{ glass.colour }}">
+            <svg class="glass-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5 7.5 2 13.5 4 14.5 10 9.5 14.5 3.5 12.5Z"/><path class="glint" d="M6 5.5 8.5 4"/></svg>
+            <strong><span class="glass-name" data-name="{{ glass.name }}">Piece {{ glass.id }}</span></strong>
+            <p>{{ glass.hint }}</p>
+        </li>
+    {%- endfor %}
+    </ul>
+
+    <p>The pieces are small and a little translucent, so look closely. Each one is a link: click it to add it to your collection. <button class="treasure-reset" type="button">Start again</button></p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const render = () => {
+            const found = window.SeaGlass ? window.SeaGlass.found() : [];
+            const total = {{ site.data.seaglass.size }};
+            document.querySelectorAll('.treasure-grid li').forEach((li) => {
+                const isFound = found.includes(Number(li.dataset.glass));
+                const name = li.querySelector('.glass-name');
+                li.classList.toggle('is-found', isFound);
+                name.textContent = isFound ? name.dataset.name : 'Piece ' + li.dataset.glass + ': not found yet';
+            });
+            document.querySelector('.treasure-count').textContent = found.length + ' / ' + total;
+            document.querySelector('.treasure-bar span').style.width = (found.length / total * 100) + '%';
+            document.querySelector('.treasure-prize').classList.toggle('is-won', found.length >= total);
+        };
+
+        document.querySelector('.treasure-reset').addEventListener('click', () => {
+            if (window.confirm('Throw all your sea glass back into the sea?')) {
+                window.SeaGlass.reset();
+                render();
+            }
+        });
+
+        const prize = document.querySelector('.treasure-prize');
+        const chest = document.querySelector('.chest');
+        chest.addEventListener('click', () => {
+            prize.classList.add('is-open');
+            chest.setAttribute('aria-label', 'The treasure chest is open');
+            chest.disabled = true;
+        });
+
+        document.addEventListener('seaglass:found', render);
+        render();
+    });
+</script>

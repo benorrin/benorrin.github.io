@@ -27,7 +27,7 @@ Most of my side projects start in my homelab, where I self-host services and try
 
 {% include about-projects.html %}
 
-Away from the keyboard I'm usually on a paddleboard when the sea allows, in the gym, or listening to music.
+Away from the keyboard I'm usually on a paddleboard when the sea allows{% include seaglass.html id=2 %}, in the gym, or listening to music.
 
 ## Get in touch
 

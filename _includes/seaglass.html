@@ -1,0 +1,3 @@
+{%- comment -%}A hidden piece of sea glass for the treasure hunt. Usage: include seaglass.html id=3{%- endcomment -%}
+{%- assign glass = site.data.seaglass | where: "id", include.id | first -%}
+<a class="seaglass" href="/treasure/" data-glass="{{ glass.id }}" aria-label="A piece of sea glass" title="Sea glass!" style="--glass: {{ glass.colour }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5 7.5 2 13.5 4 14.5 10 9.5 14.5 3.5 12.5Z"/><path class="glint" d="M6 5.5 8.5 4"/></svg></a>

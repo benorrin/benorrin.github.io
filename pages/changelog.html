@@ -1,0 +1,20 @@
+---
+layout: page
+title: Changelog
+permalink: /changelog/
+description: Everything that's changed on this site since it first went live in 2022, newest first.
+---
+
+<ol class="changelog">
+{%- assign groups = site.data.changelog | group_by: "date" %}
+{%- for group in groups %}
+    <li>
+        <time datetime="{{ group.name | date: '%Y-%m-%d' }}">{{ group.name | date: "%-d %B %Y" }}</time>
+        <ul>
+        {%- for entry in group.items %}{% for change in entry.changes %}
+            <li>{{ change | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}{% endfor %}
+        </ul>
+    </li>
+{%- endfor %}
+</ol>

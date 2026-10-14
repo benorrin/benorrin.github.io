@@ -16,7 +16,7 @@ skills:
 source: https://github.com/benorrin/openfive
 ---
 
-*The Famous Five: Treasure Island* (*5 Freunde auf Schatzsuche*) is a point-and-click adventure released by Ravensburger Interactive in 1999. You play George, Dick and the rest of the gang on the trail of a treasure hidden on Kirrin Island. Like a lot of late-90s PC games, it was built for Windows 95 and DirectX, so getting it working today means fiddling with compatibility modes, emulators or a virtual machine.
+*The Famous Five: Treasure Island* (*5 Freunde auf Schatzsuche*) is a point-and-click adventure released by Ravensburger Interactive in 1999. You play George, Dick and the rest of the gang on the trail of a treasure hidden on Kirrin Island{% include seaglass.html id=4 %}. Like a lot of late-90s PC games, it was built for Windows 95 and DirectX, so getting it working today means fiddling with compatibility modes, emulators or a virtual machine.
 
 OpenFive fixes that. Put your old CD in the drive (or point it at a disc image) and the original adventure plays again, from the intro movie to the closing credits:
 

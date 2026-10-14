@@ -20,52 +20,41 @@ layout: default
 {% else %}
 
 <article>
-    <header class="article-header">
+    <header class="page-header">
         <a href="/portfolio/" class="back-link">← Portfolio</a>
         <h1>{{ page.title }}</h1>
         {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
-        {% if page.highlight %}
-        <div class="stat">
-            <span class="stat-value">{{ page.highlight.value }}</span>
-            <span class="stat-label">{{ page.highlight.label }}</span>
-        </div>
-        {% endif %}
-        <div class="fact-bar">
-            {% if page.company %}
-            <div class="fact">
-                <span class="fact-label">Delivered at</span>
-                <span class="fact-value">{{ page.company }}</span>
-            </div>
-            {% endif %}
-            {% if page.period %}
-            <div class="fact">
-                <span class="fact-label">When</span>
-                <span class="fact-value">{{ page.period }}</span>
-            </div>
-            {% endif %}
-            {% if page.roles %}
-            <div class="fact">
-                <span class="fact-label">Roles</span>
-                <div class="tags">{% for role in page.roles %}<span class="tag tag-accent">{{ role }}</span>{% endfor %}</div>
-            </div>
-            {% endif %}
-            {% if page.skills %}
-            <div class="fact">
-                <span class="fact-label">Stack</span>
-                <div class="tags">{% for skill in page.skills %}<span class="tag">{{ skill }}</span>{% endfor %}</div>
-            </div>
-            {% endif %}
-        </div>
     </header>
 
-    <div class="prose">
-        {{ content }}
-    </div>
+    <div class="detail">
+        <div class="detail-main">
+            <div class="prose detail-prose">
+                {{ content }}
+            </div>
 
-    <footer class="article-footer">
-        <a href="/portfolio/" class="btn btn-outline">← All client work</a>
-        <a href="mailto:ben@orrin.uk" class="btn">Work with me</a>
-    </footer>
+            <footer class="detail-footer">
+                <a href="/portfolio/" class="btn btn-outline">← All client work</a>
+                <a href="mailto:ben@orrin.uk" class="btn">Get in touch</a>
+            </footer>
+        </div>
+
+        <aside class="detail-side">
+            <div class="detail-card">
+                {% if page.highlight %}
+                <div class="stat">
+                    <span class="stat-value">{{ page.highlight.value }}</span>
+                    <span class="stat-label">{{ page.highlight.label }}</span>
+                </div>
+                {% endif %}
+                <dl class="detail-facts">
+                    {% if page.company %}<div><dt>Delivered at</dt><dd>{{ page.company }}</dd></div>{% endif %}
+                    {% if page.period %}<div><dt>When</dt><dd>{{ page.period }}</dd></div>{% endif %}
+                    {% if page.roles %}<div><dt>Roles</dt><dd class="tags">{% for role in page.roles %}<span class="tag tag-accent">{{ role }}</span>{% endfor %}</dd></div>{% endif %}
+                    {% if page.skills %}<div><dt>Stack</dt><dd class="tags">{% for skill in page.skills %}<span class="tag">{{ skill }}</span>{% endfor %}</dd></div>{% endif %}
+                </dl>
+            </div>
+        </aside>
+    </div>
 </article>
 
 {% endif %}

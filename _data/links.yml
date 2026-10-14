@@ -1,0 +1,36 @@
+- group: People
+  name: Figglewatts
+  url: https://figglewatts.co.uk/
+  host: figglewatts.co.uk
+  about: My friend, and a maker of genuinely cool indie games that lean into the surreal and the absurd. Making games since 2011. Go and play some.
+  retro_note: "(my friend!!! makes COOL games)"
+
+- group: People
+  name: Coding Horror
+  url: https://blog.codinghorror.com/
+  host: blog.codinghorror.com
+  about: Jeff Atwood, co-founder of Stack Overflow and Discourse, on programming and the human side of building software. Writing since 2004.
+
+- group: People
+  name: Kip Hakes
+  url: https://www.kiphakes.com/
+  host: kiphakes.com
+  about: A UK blogger since 2008, covering tech, parenting, theme parks and travel, plus retro console repairs and DIY on YouTube.
+
+- group: People
+  name: Ellie & Co
+  url: https://ellieandco.co.uk/
+  host: ellieandco.co.uk
+  about: A slow-travel magazine by Ellie Seymour, an award-winning travel journalist who is also based in Brighton.
+
+- group: Reading and resources
+  name: Techdirt
+  url: https://www.techdirt.com/
+  host: techdirt.com
+  about: Mike Masnick and co. on technology policy, civil liberties, copyright and free speech. Sharp, independent, and running since 1997.
+
+- group: Reading and resources
+  name: awesome-selfhosted
+  url: https://github.com/awesome-selfhosted/awesome-selfhosted
+  host: github.com/awesome-selfhosted
+  about: A huge, community-curated list of free software you can host yourself. Dangerous for anyone with a homelab and a free weekend.

@@ -1,0 +1,33 @@
+# The treasure hunt. Each piece is hidden with: include seaglass.html id=N
+- id: 1
+  name: Seafoam
+  colour: "#7fc8b4"
+  hint: Every voyage starts at home port.
+- id: 2
+  name: Bottle green
+  colour: "#3f9a5c"
+  hint: Look where Ben goes when the sea allows.
+- id: 3
+  name: Amber
+  colour: "#d9922b"
+  hint: Every CV says where you're based. Read his to the end.
+- id: 4
+  name: Cobalt
+  colour: "#3a62c4"
+  hint: Five friends once searched an island for treasure. Read the first paragraph of their story closely.
+- id: 5
+  name: Buoy red
+  colour: "#e0603c"
+  hint: The site explains how it's made. The colour of a buoy is a clue.
+- id: 6
+  name: Aqua
+  colour: "#4fb6d6"
+  hint: Some pages have drifted out to sea. Go and get lost.
+- id: 7
+  name: Lavender
+  colour: "#a083d6"
+  hint: Party like it's 1999 (check the footer). Ben lives right next to the sea, and so does this piece.
+- id: 8
+  name: Moonstone
+  colour: "#c9d6df"
+  hint: Some things only wash up when the tide comes in. View the source to learn how to summon it.

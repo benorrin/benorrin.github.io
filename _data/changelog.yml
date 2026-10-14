@@ -1,0 +1,41 @@
+- date: 2026-10-15
+  changes:
+    - Partying like it's [1999](/1999/), complete with a MIDI button and a visitor counter
+    - Eight pieces of sea glass have washed up around the site. [Can you find them all?](/treasure/)
+    - Added Techdirt and awesome-selfhosted to the [links](/links/)
+- date: 2026-10-14
+  changes:
+    - Added the [uses](/uses/), [links](/links/) and changelog pages, and a [humans.txt](/humans.txt)
+    - Rewrote the [colophon](/colophon), which still claimed the site ran on a PC in my bedroom
+    - New footer, with 88×31 buttons as tradition demands
+    - Switched on the RSS feed, ready for future blog posts
+    - Hid a few surprises. View the source for a clue
+- date: 2026-10-14
+  changes:
+    - Redesigned the [About](/about/) page
+    - Added a light/dark theme switch
+- date: 2026-10-14
+  changes:
+    - The [404 page](/404.html) is now a seaside scene with a buoy you can poke
+- date: 2026-10-14
+  changes:
+    - A full redesign, with a new [Experience](/experience/) page
+    - Rewrote the [portfolio](/portfolio/) case studies
+    - Added [OpenFive](/projects/openfive.html) and [Geekoffee](/projects/geekoffee.html) to the projects
+- date: 2026-03-18
+  changes:
+    - Redesign, with new layouts for projects and blog posts
+- date: 2024-05-30
+  changes:
+    - Replaced the off-the-shelf theme with hand-written layouts and CSS
+    - Added a proper 404 page
+- date: 2024-05-16
+  changes:
+    - Added a page about the software I use, which has since grown up into [/uses](/uses/)
+- date: 2024-04-26
+  changes:
+    - Added a [GPG key](/gpg) page and the first colophon
+    - New header photo
+- date: 2022-11-11
+  changes:
+    - orrin.uk goes live, on the Minimalistic Jekyll theme

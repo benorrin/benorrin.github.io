@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+<!--
+    Hello, source reader. Welcome aboard.
+
+                  .
+                 (_)          You found the engine room. This site is
+                 _|_          hand-made: Jekyll, hand-written CSS and
+                |===|         a little vanilla JavaScript. No frameworks,
+                |   |         no trackers, no cookies.
+                |===|
+           ~~~~~|___|~~~~~    The people:   /humans.txt
+        ~~~~~~~~~~~~~~~~~~~~  The workings: /colophon
+                              The source:   github.com/benorrin/benorrin.github.io
+
+    Feeling playful?  ↑ ↑ ↓ ↓ ← → ← → B A  brings the tide in.
+    There's another one in the browser console.
+
+    Fancy a treasure hunt? Eight pieces of sea glass are hidden
+    around this site. Your collection, and some hints: /treasure/
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +32,7 @@
     {% endif %}
 
     {% include head-meta.html %}
+    <link rel="author" href="/humans.txt">
 
     <script>
         document.documentElement.classList.add('js');
@@ -70,12 +90,31 @@
                 <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:ben@orrin.uk">Email</a></li>
                 <li><a href="/gpg">GPG</a></li>
-                <li><a href="/colophon">Colophon</a></li>
             </ul>
         </div>
+        <div class="container footer-extra">
+            <ul class="footer-site" aria-label="About this site">
+                <li><a href="/uses/">Uses</a></li>
+                <li><a href="/links/">Links</a></li>
+                <li><a href="/changelog/">Changelog</a></li>
+                <li><a href="/colophon">Colophon</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
+                <li><a href="/humans.txt">humans.txt</a></li>
+            </ul>
+            <div class="badges">
+                <a class="badge88" href="/links/#link-to-me" style="--b1:#123142;--b2:#e0603c"><b>~</b><span>orrin.uk</span></a>
+                <a class="badge88" href="https://jekyllrb.com/" style="--b1:#1b1b1b;--b2:#cc0000"><b>⚗</b><span>Jekyll<br>powered</span></a>
+                <a class="badge88" href="https://www.opensuse.org/" style="--b1:#173f4f;--b2:#73ba25"><b>◉</b><span>made on<br>openSUSE</span></a>
+                <span class="badge88" style="--b1:#3a3330;--b2:#fbf7f2;--t2:#1c1917"><b>✕</b><span>no cookies<br>no tracking</span></span>
+                <a class="badge88" href="/feed.xml" style="--b1:#7a3b00;--b2:#f26522"><b>)))</b><span>RSS<br>feed</span></a>
+                <a class="badge88" href="https://anybrowser.org/campaign/" style="--b1:#2f4858;--b2:#5fb0cf"><b>☺</b><span>any<br>browser</span></a>
+            </div>
+        </div>
+        <p class="container footer-note">Last built {{ site.time | date: "%-d %B %Y" }} · Made by hand in Brighton · <a href="/1999/">Best viewed in 1999</a></p>
         <div class="footer-brand" aria-hidden="true">Ben Orrin</div>
     </footer>
 
     <script src="/assets/js/main.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="/assets/js/seaglass.js?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

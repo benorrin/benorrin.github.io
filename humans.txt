@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /humans.txt
+---
+/* TEAM */
+    Developer, designer and writer: Ben Orrin
+    Site: https://orrin.uk
+    Contact: ben [at] orrin.uk
+    GitHub: https://github.com/benorrin
+    From: Brighton, UK
+
+/* THANKS */
+    Jekyll, for staying simple.
+    Rasmus Andersson, for Inter.
+    JetBrains, for JetBrains Mono.
+    The sea, for the 404 page.
+
+/* SITE */
+    Last update: {{ site.time | date: '%Y/%m/%d' }}
+    Language: English (British)
+    Standards: HTML5, CSS3
+    Components: Jekyll, hand-written CSS, a little vanilla JavaScript
+    Software: Kate, Git, GitHub Pages
+    Source: https://github.com/benorrin/benorrin.github.io
+    Tracking: none
+
+/* SECRETS */
+    There are a couple. Start by viewing the source.
