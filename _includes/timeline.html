@@ -1,0 +1,26 @@
+{%- comment -%} Renders _data/experience.yml. Pass compact=true for the home page summary. {%- endcomment -%}
+<ol class="timeline{% if include.compact %} is-compact{% endif %}">
+    {% for job in site.data.experience %}
+    {% unless job.earlier and include.compact %}
+    <li class="timeline-item reveal{% if job.current %} is-current{% endif %}{% if job.earlier %} is-earlier{% endif %}">
+        <div class="timeline-period">{{ job.period }}</div>
+        <div class="timeline-body">
+            <h3>{{ job.role }} <span class="timeline-company">· {{ job.company }}</span></h3>
+            {% if job.client %}<div class="timeline-client">Client: {{ job.client }}</div>{% endif %}
+            <p>{{ job.summary }}</p>
+            {% if job.highlights and include.compact == nil %}
+            <ul>
+                {% for h in job.highlights %}<li>{{ h }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            {% if job.stack %}
+            <div class="tags">{% for s in job.stack %}<span class="tag">{{ s }}</span>{% endfor %}</div>
+            {% endif %}
+            {% if job.link and include.compact == nil %}
+            <a class="timeline-link" href="{{ job.link.url }}">{{ job.link.label }} →</a>
+            {% endif %}
+        </div>
+    </li>
+    {% endunless %}
+    {% endfor %}
+</ol>

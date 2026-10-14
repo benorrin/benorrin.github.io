@@ -2,6 +2,7 @@
 layout: page
 title: Software I Use
 permalink: /software-i-use
+sitemap: false
 ---
 
 Here is a list of various software I use for different tasks. 

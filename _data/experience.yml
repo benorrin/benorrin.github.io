@@ -1,0 +1,41 @@
+# Work history shown on /experience/ and the home page.
+# Newest first. `highlights` and `link` are optional.
+
+- role: C# Developer
+  company: NETbuilder
+  client: Aviva
+  period: May 2026 – Present
+  current: true
+  summary: >-
+    Building .NET software for Aviva, one of the UK's largest insurers,
+    as a developer with NETbuilder.
+  stack: [C#, .NET]
+
+- role: Platform Engineer
+  company: Ground Control
+  period: Dec 2024 – Nov 2025
+  summary: >-
+    Cloud architecture, infrastructure as code, CI/CD pipelines and
+    observability, so the engineering team could ship reliably.
+  highlights:
+    - Helped transition ad-hoc cloud environments into a well-architected platform with proper subnetting, firewalls and access controls.
+    - Designed and built a Grafana observability platform, with custom data scripts, to track uptime, trigger alerts and speed up diagnosis of backend issues.
+    - Built containerised deployment pipelines (Docker/Podman) and migrated infrastructure to code for reliable, repeatable releases.
+    - Found inefficiencies and retired unused resources, reducing cloud spend.
+  stack: [Terraform, Grafana, Prometheus, Docker, Podman, CI/CD]
+
+- role: Backend Developer
+  company: Radical Company
+  period: Dec 2022 – Dec 2024
+  summary: >-
+    Backend APIs and AWS infrastructure for clients including Lloyds Bank,
+    Chorley Building Society and Circle of Trust.
+  highlights:
+    - Designed and built scalable backend APIs in C#/ASP.NET and Rust/GraphQL for clients including Lloyds Bank.
+    - Owned AWS infrastructure across client projects, cutting Lloyds Working Capital Management's infrastructure spend by more than 90%.
+    - Set up CI/CD pipelines to streamline deployments, reduce errors and shorten time to market.
+    - Worked closely with developers, QA and client stakeholders to deliver features and keep systems stable.
+  link:
+    url: /portfolio/
+    label: See the case studies
+  stack: [C#, ASP.NET, Rust, GraphQL, AWS, CI/CD]

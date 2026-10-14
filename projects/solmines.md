@@ -1,8 +1,9 @@
 ---
 layout: project
 title: SolMines
-description: An example webapp created to showcase modern, scalable web development. Users can register an account and win prentend money placing bets in a fun twist on the classic PC game minesweeper.
+description: An example webapp created to showcase modern, scalable web development. Users can register an account and win pretend money placing bets in a fun twist on the classic PC game minesweeper.
 period: November 2022
+date: 2022-11-01
 skills:
  - NodeJS
  - React
@@ -12,9 +13,9 @@ skills:
 source: https://github.com/benorrin/mines
 ---
 
-SolMines is an example webapp created to showcase modern, scalable web development. Users can register an account and win prentend money placing bets in a fun twist on the classic PC game minesweeper.
+SolMines is an example webapp created to showcase modern, scalable web development. Users can register an account and win pretend money placing bets in a fun twist on the classic PC game minesweeper.
 
-The app is fully scalable, utilising AWS for it’s backend infrastructure. The project uses industry standards such as Infrastructure as Code, CI/CD, version control and unit testing to aid development.
+The app is fully scalable, utilising AWS for its backend infrastructure. The project uses industry standards such as Infrastructure as Code, CI/CD, version control and unit testing to aid development.
 
 ## Key Features
 

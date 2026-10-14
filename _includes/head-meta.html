@@ -1,0 +1,42 @@
+{%- assign meta_title = page.title | default: site.title -%}
+{%- if page.url == "/" -%}{%- assign meta_title = site.title | append: " · " | append: site.job_title -%}{%- endif -%}
+{%- assign meta_desc = page.description | default: site.description | strip_html | strip_newlines | strip -%}
+{%- if page.hero -%}{%- assign meta_image = "/assets/img/" | append: page.hero -%}
+{%- elsif page.image and page.image contains ".svg" -%}{%- assign meta_image = site.image -%}
+{%- elsif page.image -%}{%- assign meta_image = "/assets/img/" | append: page.image -%}
+{%- else -%}{%- assign meta_image = site.image -%}{%- endif -%}
+<meta name="description" content="{{ meta_desc }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ meta_title }}">
+<meta property="og:description" content="{{ meta_desc }}">
+<meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<meta property="og:image" content="{{ meta_image | absolute_url }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% elsif page.url == '/' %}profile{% else %}website{% endif %}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+{%- if page.url == "/" or page.url == "/about/" or page.url == "/experience/" %}
+{%- assign current = site.data.experience | where: "current", true | first %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author }}",
+  "url": "{{ site.url }}",
+  "image": "{{ site.image | absolute_url }}",
+  "email": "mailto:{{ site.email }}",
+  "jobTitle": "{{ site.job_title }}",
+  {%- if current %}
+  "worksFor": { "@type": "Organization", "name": "{{ current.company }}" },
+  {%- endif %}
+  "address": { "@type": "PostalAddress", "addressLocality": "Brighton", "addressCountry": "GB" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "The Open University" },
+  "knowsAbout": ["C#", ".NET", "Rust", "AWS", "Azure", "Terraform", "CI/CD", "Platform engineering"],
+  "sameAs": ["{{ site.social.github }}", "{{ site.social.linkedin }}"]
+}
+</script>
+{%- endif %}

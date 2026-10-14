@@ -1,0 +1,10 @@
+<section class="cta reveal">
+    <div>
+        <h2>{{ include.title | default: "Let's talk" }}</h2>
+        <p>{{ include.text | default: "Whether it's a role, a project or just a chat about .NET, infrastructure or homelabs, I'd love to hear from you. My full CV is available on request." }}</p>
+    </div>
+    <div class="cta-actions">
+        <a href="mailto:{{ site.email }}" class="btn">Email me</a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+    </div>
+</section>

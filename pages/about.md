@@ -2,17 +2,32 @@
 layout: page
 title: About
 permalink: /about/
+description: Software engineer in Brighton, working in C#/.NET with a background in platform engineering.
 ---
 
-I'm Ben, a Platform and DevOps Engineer based in Brighton, where the sea is close enough that I'm on a paddleboard whenever the weather allows (and sometimes when it doesn't).
+I'm Ben, a software engineer based in Brighton, where the sea is close enough that I'm on a paddleboard whenever the weather allows (and sometimes when it doesn't).
 
-I work on the infrastructure underneath software: the cloud systems, pipelines, and automation that let teams ship without things falling over. It's behind-the-scenes work, but that's what I enjoy about it. I like owning a problem from first principles through to something that actually runs in production.
+Right now I'm a C# developer at NETbuilder, building .NET software for Aviva. Before that I was a platform engineer at Ground Control, turning ad-hoc cloud environments into a well-architected platform with infrastructure as code, CI/CD pipelines and Grafana-based observability. And before *that* I was a backend developer at Radical Company, building APIs and running AWS infrastructure for clients such as [Lloyds Bank](/portfolio/lloyds-working-capital-management.html), where I helped cut infrastructure spend by more than 90%.
 
-I've worked across startups and regulated financial environments, getting stuck into everything from wrangling legacy infrastructure into something modern and maintainable, to building the internal tooling that means developers can get on with their work without raising a ticket for everything.
+## What I bring
 
-Although my focus these days is platform engineering, I've been writing code for a long time and it's something I genuinely love. I'm comfortable dropping into a codebase, whether that's Go, Rust, C#, or something else, and I think being an engineer who can actually code makes me a better platform engineer. I understand the problems on both sides of the fence.
+Most engineers sit on one side of the fence: they write the application, or they run the platform it lives on. I've done both, and I think it makes me better at each.
 
-When I'm not doing that professionally, I'm running a homelab at home, self-hosting services, tinkering with infrastructure for fun, and currently building an open-source fitness app for weightlifters who don't want their training data locked behind a subscription. It's the kind of project that exists because I wanted it to exist.
+* **As a developer**, I write code with deployment, observability and cost in mind, because I've built and run the platforms it lands on.
+* **As a platform engineer**, I build tooling that developers actually want to use, because I know what it's like to wait on a ticket to get something shipped.
 
-I'm a big music fan, I like to keep active, and I believe good infrastructure, like a good setlist, should be so well put together that nobody notices the effort that went into it.
-I'm open to new opportunities, remote or hybrid around London or Brighton. If you're working on something interesting, get in touch.
+I'm comfortable dropping into a codebase, whether it's C#, Rust, Go or something else, and I enjoy owning a problem from first principles through to something that runs reliably in production. I've worked in startups and in regulated financial environments, from wrangling legacy systems into something modern and maintainable to building internal tooling that removes friction for the rest of the team.
+
+## How I got here
+
+I didn't take the traditional route. I spent five years working full time while studying part-time for a BSc in Computing & IT with The Open University, which I finished with a 2:1. It taught me to be self-directed, and it's why I still learn best by building things.
+
+## Outside work
+
+I run a homelab at home, self-hosting services and tinkering with infrastructure for fun. I also build open-source software in my spare time: tools like [Geekoffee](/projects/geekoffee.html), a self-hosted fitness tracker called [OpenIron](/projects/openiron.html), and [OpenFive](/projects/openfive.html), which brings a 1999 adventure game back to life on modern computers. These are the kinds of projects that exist because I wanted them to exist.
+
+I'm a big music fan and I like to keep active. I believe good infrastructure, like a good setlist, should be so well put together that nobody notices the effort that went into it.
+
+## Get in touch
+
+I'm always happy to hear about interesting work, remote or hybrid around Brighton and London. The best way to reach me is [email](mailto:ben@orrin.uk) or [LinkedIn](https://www.linkedin.com/in/ben-orrin). You can also see [my experience](/experience/) or [what I've built](/projects/).

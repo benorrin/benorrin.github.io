@@ -1,8 +1,10 @@
 ---
 layout: portfolio
+order: 2
+company: Radical Company
 title: Circle of Trust
 image: circle-of-trust.jpg
-description: Developed a robust, scalable API framework and optimized AWS infrastructure for the Circle of Trust digital word-of-mouth application, enhancing performance and reliability.
+description: Built the Rust and GraphQL API behind a word-of-mouth recommendations app, plus the AWS infrastructure and CI/CD pipeline it runs on.
 roles:
   - Backend Developer
   - Cloud Infrastructure
@@ -11,35 +13,25 @@ skills:
  - Rust
  - GraphQL
  - AWS
- - DevOps
+ - CI/CD
 ---
 
-[Circle of Trust](https://www.circleoftrust.co.uk/) is a pioneering digital word-of-mouth application facilitating seamless connections between users in search of reliable recommendations and businesses eager to engage with potential customers.
+## The brief
 
-![circle of trust application](/assets/img/circle-of-trust.jpg)
+[Circle of Trust](https://www.circleoftrust.co.uk/) is a digital word-of-mouth app. It connects people looking for recommendations they can trust with businesses that want to reach new customers. The client needed a backend that could grow with a large user base without sacrificing performance or reliability.
 
-## Overview
+![Screens from the Circle of Trust app](/assets/img/circle-of-trust.jpg)
 
-Circle of Trust, an innovative platform, sought to revolutionize digital word-of-mouth by creating a seamless connection between users seeking reliable recommendations and businesses looking to engage with potential customers. The objective was to develop a robust, scalable, and efficient application capable of handling a large user base while ensuring optimal performance and reliability. Key deliverables included designing and implementing a resilient API framework, configuring and managing AWS infrastructure, and leveraging cutting-edge technologies like Rust and GraphQL.
+## What I did
 
-The project required a comprehensive backend development effort and meticulous configuration of AWS services, including EC2 instances, load balancing, and RDS. The goal was to create an application that could scale effortlessly and provide a seamless user experience, fostering trust and reliability in user recommendations.
+I was part of Radical's backend team, working across the API and the infrastructure underneath it.
 
-## Objectives
-  - Develop a robust and scalable API framework
-  - Ensure optimal performance and reliability of the application
-  - Efficiently manage AWS infrastructure to support a vast user base
-  - Leverage Rust and GraphQL for enhanced application efficiency
+* **API in Rust and GraphQL.** I helped design and build the API framework at the core of the app.
+* **AWS infrastructure.** I designed, configured and managed the hosting: EC2 instances behind a load balancer, with RDS for the database.
+* **CI/CD.** I set up the pipeline that builds and deploys the backend, so the team could ship changes quickly and safely.
 
-## Role and Contributions
-  - **Backend Development:** Played a crucial role in crafting a resilient and scalable API framework using Rust and GraphQL, essential for the app's core functionalities.
-  - **AWS Infrastructure:** Designed, configured, and managed AWS infrastructure, including EC2 instances, load balancing, and RDS, to ensure optimal performance and reliability.
-  - **DevOps:** Implemented a modern CI/CD pipeline to streamline development and deployment processes, improving efficiency and reducing time-to-market.
+## The result
 
-As part of Radical’s backend team, I was instrumental in developing the API framework and managing the AWS infrastructure. My work with Rust and GraphQL ensured the application was both efficient and scalable, capable of handling a large number of users seamlessly. Additionally, my expertise in AWS infrastructure and DevOps practices contributed to the application’s reliability and performance, making it a trusted platform for users seeking recommendations and businesses looking to connect with potential customers.
-
-## Impact
-  - **Scalability:** Developed an exceptionally scalable application capable of accommodating a vast user base seamlessly
-  - **Performance:** Ensured optimal performance and reliability through robust AWS infrastructure management
-  - **Efficiency:** Leveraged Rust and GraphQL to create an efficient and responsive application
-
-The Circle of Trust application now stands as a highly efficient and scalable platform, offering a seamless user experience and fostering reliable connections between users and businesses. These achievements highlight my ability to deliver innovative, high-performance solutions in a collaborative environment.
+* **A fast, scalable backend** ready for a growing user base
+* **Load-balanced AWS infrastructure** with a managed database, built for reliability
+* **Automated deployments**, which shortened the path from code to production

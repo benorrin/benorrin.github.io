@@ -1,10 +1,18 @@
 title: Ben Orrin
+author: Ben Orrin
 email: ben@orrin.uk
+job_title: Software Engineer
+location: Brighton, UK
 description: >- # this means to ignore newlines until "baseurl:"
-  Software developer, tea drinker and all round nerd.
-  This is my home on the web.
+  Ben Orrin is a Brighton-based software engineer working in C#/.NET,
+  with a background in platform engineering, AWS, Azure and Terraform.
 baseurl: "" # the subpath of your site, leave empty if not needed
 url: "https://orrin.uk" # the base hostname & protocol for your site
+image: /assets/img/ben-orrin.jpg
+
+social:
+  github: https://github.com/benorrin
+  linkedin: https://www.linkedin.com/in/ben-orrin
 
 collections:
   projects:

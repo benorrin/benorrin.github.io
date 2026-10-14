@@ -1,0 +1,35 @@
+{% assign item = include.item %}
+<article class="card reveal">
+    {% if item.image %}
+    <div class="card-media{% if item.image contains '.svg' %} is-icon{% endif %}">
+        <img src="/assets/img/{{ item.image }}" alt="" loading="lazy">
+    </div>
+    {% else %}
+    <div class="card-media is-placeholder" aria-hidden="true"><span>{{ item.title }}</span></div>
+    {% endif %}
+    <div class="card-body">
+        {% if item.company or item.period or item.status %}
+        <div class="card-meta">
+            {%- if item.status %}<span class="status-pill">{{ item.status }}</span>{% endif -%}
+            {{ item.company }}{% if item.company and item.period %} · {% endif %}{{ item.period }}
+        </div>
+        {% endif %}
+        <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        {% if item.highlight %}<div class="card-stat"><strong>{{ item.highlight.value }}</strong> {{ item.highlight.label }}</div>{% endif %}
+        <p>{{ item.description | default: item.excerpt | strip_html | truncatewords: 32 }}</p>
+        {% if item.skills %}
+        <div class="tags">
+            {% for skill in item.skills limit: 5 %}<span class="tag">{{ skill }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <div class="card-footer">
+            <span class="more">{{ include.label | default: "Read more" }} →</span>
+            {% if item.source %}
+            <a class="ext" href="{{ item.source }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.title }} source code on GitHub">
+                {% include icon-github.html %}
+                Source
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</article>

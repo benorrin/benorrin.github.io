@@ -1,0 +1,13 @@
+<ul class="post-list">
+    {% for post in include.posts %}
+    <li class="reveal">
+        <a href="{{ post.url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{% include date.html date=post.date %}</time>
+            <div>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+            </div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

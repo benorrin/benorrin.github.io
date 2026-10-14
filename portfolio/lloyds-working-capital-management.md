@@ -1,51 +1,41 @@
 ---
 layout: portfolio
+order: 1
+company: Radical Company
 title: Lloyds Working Capital Management
 image: lloyds-working-capital-management.jpg
-description: Modernized the Lloyds Working Capital Management tool by optimizing AWS infrastructure and enhancing backend functionality with C# and ASP.NET for improved scalability, reliability, and user accessibility.
-period: March - October 2023
+description: Rebuilt the backend and AWS infrastructure behind a Lloyds Bank internal tool so it could launch to the public.
+period: March – October 2023
+highlight:
+  value: ">90%"
+  label: reduction in AWS infrastructure spend
 roles:
   - Backend Developer
   - Cloud Infrastructure
   - DevOps
 skills:
  - C#
- - ASP .NET
+ - ASP.NET
  - AWS
- - DevOps
+ - CI/CD
 ---
 
-[Lloyds Working Capital Management](https://www.lloydsbank.com/business/working-capital-management-tool.html) is an online tool designed to help businesses optimize their financial performance using publicly available data from Companies House. This tool provides a comprehensive range of statistics about individual companies, enabling users to gain insights into various financial metrics and model different scenarios to enhance their working capital management.
+## The brief
 
-![lloyds working capital management tool](/assets/img/lloyds-working-capital-management.jpg)
+[Lloyds Bank](https://www.lloydsbank.com/) had an internal Working Capital Management (WCM) tool that staff used to assess products and services for business clients. Lloyds wanted to turn it into a [public tool](https://www.lloydsbank.com/business/working-capital-management-tool.html): any business could look itself up using Companies House data, see its key financial metrics, and model scenarios to improve its working capital.
 
-## Overview
+That meant taking a legacy internal codebase and making it ready for the public, at lower cost, while staying compliant with GDPR and financial regulations.
 
-[Lloyds Bank](https://www.lloydsbank.com/), one of the largest financial institutions in the UK, approached us with a brief to modernize their existing Working Capital Management (WCM) tool. The primary objective was to transform this internal tool, originally used by employees to assess products and services for business clients, into a publicly accessible platform. The revamped tool needed to leverage publicly available data from Companies House to help businesses optimize their financial performance. Key deliverables included ensuring compliance with GDPR and financial regulations, reducing infrastructure costs, and enhancing the tool's functionality and user experience.
+![The public Lloyds Working Capital Management tool](/assets/img/lloyds-working-capital-management.jpg)
 
-The project required a comprehensive overhaul of the backend infrastructure and the integration of external APIs to facilitate seamless data aggregation and processing. Additionally, the client emphasized the importance of making the tool scalable, reliable, and cost-effective, necessitating a complete redesign of the AWS infrastructure. The ultimate goal was to deliver a robust, user-friendly tool that provided valuable financial insights to businesses, enabling them to make more informed decisions and improve their working capital management.
+## What I did
 
-## Objectives
-  - Modernize an internal tool for public accessibility
-  - Reduce infrastructure costs
-  - Ensure compliance with GDPR and financial regulations
-  - Improve the tool's functionality and user experience
+* **Rebuilt the backend API in C# and ASP.NET.** I designed and built a modernised API that aggregates and processes company data, including integrating the Companies House API.
+* **Redesigned the AWS infrastructure.** I re-architected the hosting for scalability, reliability and cost, which is where the biggest saving came from.
+* **Set up CI/CD.** I built a deployment pipeline so changes could be tested and shipped quickly and consistently.
 
-## Role and Contributions
-  - **Backend Development:** Designed and developed a robust and modernized API using C# and ASP.NET, ensuring seamless data aggregation and processing from diverse sources.
-  - **AWS Infrastructure:** Optimized AWS infrastructure for scalability, reliability, and cost-effectiveness, achieving substantial cost savings.
-  - **DevOps:** Implemented a modern CI/CD pipeline to streamline development and deployment processes, improving efficiency and reducing time-to-market.
+## The result
 
-As a backend developer, I played a pivotal role in redesigning the WCM tool's infrastructure and developing its backend functionalities. I focused on ensuring that the tool could handle large volumes of data efficiently, integrating it with external APIs such as Companies House. My expertise in AWS allowed me to significantly reduce infrastructure costs while enhancing the tool's scalability and reliability. Additionally, I established a robust DevOps pipeline to facilitate continuous integration and deployment, ensuring a smooth and efficient development workflow.
-
-## Impact
-  - **Cost Savings:** Reduced AWS infrastructure spend by more than 90%
-  - **Modernization:** Successfully modernized a legacy codebase, improving efficiency and scalability
-  - **Functionality:** Enhanced the tool's functionality and streamlined data access, making it more user-friendly and valuable for businesses
-
-The modernized Lloyds WCM tool now offers enhanced functionality, compliance with regulatory standards, and significant cost savings. These improvements have made the tool more accessible and beneficial to businesses, demonstrating my ability to deliver innovative solutions that align with client objectives and industry standards.
-
-
-
-
-
+* **AWS spend down by more than 90%** compared with the original infrastructure
+* **A legacy internal tool modernised** and launched publicly for UK businesses
+* **Compliant with GDPR and financial regulations**, as required for a bank-branded public service

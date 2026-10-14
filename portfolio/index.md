@@ -1,5 +1,5 @@
 ---
 layout: portfolio
 title: Portfolio
-description: Work I've done with Radical, helping clients solve complex engineering challenges.
+description: Client projects I delivered as a backend developer at Radical Company, across banking, financial services and consumer apps.
 ---

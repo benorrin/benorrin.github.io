@@ -1,0 +1,8 @@
+- group: Languages
+  items: [C#, Rust, Go, Python, SQL, JavaScript, Java, Bash]
+- group: Backend
+  items: [.NET / ASP.NET, REST APIs, GraphQL, PostgreSQL, MySQL, MongoDB]
+- group: Cloud & platform
+  items: [AWS, Azure, Terraform, Docker, Podman, Linux, Windows Server]
+- group: Delivery & operations
+  items: [CI/CD, GitHub Actions, Git, Grafana, Prometheus, Cost optimisation]
