@@ -1,9 +1,11 @@
 # Work history shown on /experience/ and the home page.
-# Newest first. `highlights` and `link` are optional.
+# Newest first. `highlights`, `link`, `url` and `client_url` are optional.
 
 - role: C# Developer
   company: NETbuilder
+  url: https://netbuilder.com/
   client: Aviva
+  client_url: https://www.aviva.co.uk/
   period: May 2026 – Present
   current: true
   summary: >-
@@ -13,6 +15,7 @@
 
 - role: Platform Engineer
   company: Ground Control
+  url: https://www.ground-control.co.uk/
   period: Dec 2024 – Nov 2025
   summary: >-
     Cloud architecture, infrastructure as code, CI/CD pipelines and
@@ -26,6 +29,7 @@
 
 - role: Backend Developer
   company: Radical Company
+  url: https://radicalcompany.com/
   period: Dec 2022 – Dec 2024
   summary: >-
     Backend APIs and AWS infrastructure for clients including Lloyds Bank,

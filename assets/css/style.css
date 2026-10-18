@@ -1235,6 +1235,22 @@ main {
     margin-bottom: 0.2rem;
 }
 
+.hero .lead a,
+.timeline-company a,
+.timeline-client a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    text-underline-offset: 3px;
+}
+
+.hero .lead a:hover,
+.timeline-company a:hover,
+.timeline-client a:hover {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+}
+
 .timeline-body p {
     margin-top: 0.4rem;
     font-size: 0.97rem;

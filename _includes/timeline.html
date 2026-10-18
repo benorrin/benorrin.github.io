@@ -5,8 +5,8 @@
     <li class="timeline-item reveal{% if job.current %} is-current{% endif %}{% if job.earlier %} is-earlier{% endif %}">
         <div class="timeline-period">{{ job.period }}</div>
         <div class="timeline-body">
-            <h3>{{ job.role }} <span class="timeline-company">· {{ job.company }}</span></h3>
-            {% if job.client %}<div class="timeline-client">Client: {{ job.client }}</div>{% endif %}
+            <h3>{{ job.role }} <span class="timeline-company">· {% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</span></h3>
+            {% if job.client %}<div class="timeline-client">Client: {% if job.client_url %}<a href="{{ job.client_url }}" target="_blank" rel="noopener noreferrer">{{ job.client }}</a>{% else %}{{ job.client }}{% endif %}</div>{% endif %}
             <p>{{ job.summary }}</p>
             {% if job.highlights and include.compact == nil %}
             <ul>
