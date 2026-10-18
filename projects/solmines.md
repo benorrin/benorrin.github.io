@@ -2,7 +2,7 @@
 layout: project
 title: SolMines
 description: An example webapp created to showcase modern, scalable web development. Users can register an account and win pretend money placing bets in a fun twist on the classic PC game minesweeper.
-period: November 2022
+period: 2022
 date: 2022-11-01
 skills:
  - NodeJS

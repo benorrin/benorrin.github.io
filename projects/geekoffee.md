@@ -2,7 +2,7 @@
 layout: project
 title: Geekoffee
 description: A tiny Rust system tray app for KDE Plasma. One click keeps your PC awake, and another click puts everything back to normal.
-period: October 2026
+period: 2026
 date: 2026-10-14
 image: geekoffee.svg
 skills:

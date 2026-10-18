@@ -2,7 +2,7 @@
 layout: project
 title: Driftwood
 description: A slow, text-driven survival game set on an uncharted South Seas island in 1846, in the spirit of A Dark Room. It runs in your browser, and every picture and sound in it is generated in code.
-period: October 2026
+period: 2026
 date: 2026-10-18
 image: driftwood.webp
 hero: driftwood.webp

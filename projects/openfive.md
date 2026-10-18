@@ -2,7 +2,7 @@
 layout: project
 title: OpenFive
 description: An open-source reimplementation of the engine behind The Famous Five, Treasure Island (1999). It runs the original game natively on Windows, macOS and Linux, with no emulator needed.
-period: October 2026
+period: 2026
 date: 2026-10-13
 image: openfive-beach.webp
 hero: openfive-beach.webp
