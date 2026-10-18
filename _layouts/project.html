@@ -23,7 +23,8 @@ layout: default
 
             <footer class="detail-footer">
                 <a href="/projects/" class="btn btn-outline">← All projects</a>
-                {% if page.source %}<a href="{{ page.source }}" target="_blank" rel="noopener noreferrer" class="btn">Source code →</a>{% endif %}
+                {% if page.play %}<a href="{{ page.play }}" class="btn">Play in your browser →</a>
+                {% elsif page.source %}<a href="{{ page.source }}" target="_blank" rel="noopener noreferrer" class="btn">Source code →</a>{% endif %}
             </footer>
         </div>
 
@@ -34,8 +35,11 @@ layout: default
                     {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
                     {% if page.skills %}<div><dt>Stack</dt><dd class="tags">{% for skill in page.skills %}<span class="tag">{{ skill }}</span>{% endfor %}</dd></div>{% endif %}
                 </dl>
+                {% if page.play %}
+                <a href="{{ page.play }}" class="btn btn-sm detail-cta">Play in your browser →</a>
+                {% endif %}
                 {% if page.source %}
-                <a href="{{ page.source }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm detail-cta">
+                <a href="{{ page.source }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm detail-cta{% if page.play %} btn-outline{% endif %}">
                     {% include icon-github.html %}
                     View on GitHub
                 </a>
