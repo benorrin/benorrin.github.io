@@ -1,3 +1,6 @@
+- date: 2026-10-28
+  changes:
+    - New projects, [warpfetch](/projects/warpfetch), a fast system info fetch for the terminal, and [coaster-queue](/projects/coaster-queue), live theme park wait times on an LED-style display
 - date: 2026-10-18
   changes:
     - New project, [Driftwood](/projects/driftwood), a castaway survival game you can play in your browser
