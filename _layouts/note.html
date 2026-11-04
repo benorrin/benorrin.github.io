@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<article class="note-single">
+    <a href="/notes/" class="back-link">← Notes</a>
+    <p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{% include date.html date=page.date %}</time></p>
+    <div class="prose">
+        {{ content }}
+    </div>
+</article>

@@ -2281,6 +2281,53 @@ a.badge88:hover {
     margin: 0 !important;
 }
 
+/* ========== NOTES ========== */
+.notes {
+    list-style: none;
+    max-width: var(--width-prose);
+    border-top: 1px solid var(--line);
+}
+
+.notes > li {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.note-date {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-3);
+}
+
+.note-date:hover {
+    color: var(--accent);
+}
+
+.notes .prose > :last-child,
+.note-single .prose > :last-child {
+    margin-bottom: 0;
+}
+
+.notes .prose img,
+.note-single .prose img {
+    margin: 1rem 0;
+}
+
+.note-single {
+    max-width: var(--width-prose);
+    margin: 0 auto;
+}
+
+.note-single .eyebrow {
+    margin-bottom: 1rem;
+}
+
+.note-single .prose {
+    font-size: 1.15rem;
+}
+
 /* ========== EASTER EGGS ========== */
 .tide {
     position: fixed;

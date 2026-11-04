@@ -1,0 +1,25 @@
+---
+layout: default
+title: Notes
+description: Short updates, links and things I've noticed. Longer writing goes on the blog.
+---
+
+<header class="page-header">
+    <p class="eyebrow">Notes</p>
+    <h1>Notes</h1>
+    <p class="lead">{{ page.description }} There's a <a href="/notes/feed.xml">feed</a> too.</p>
+</header>
+
+{%- assign notes = site.microblog | sort: "date" | reverse %}
+{%- if notes.size > 0 %}
+<ol class="notes">
+    {%- for note in notes %}
+    <li class="reveal">
+        <a class="note-date" href="{{ note.url }}"><time datetime="{{ note.date | date_to_xmlschema }}">{% include date.html date=note.date %}</time></a>
+        <div class="prose">{{ note.content }}</div>
+    </li>
+    {%- endfor %}
+</ol>
+{%- else %}
+<div class="empty-state">No notes yet. Check back soon!</div>
+{%- endif %}

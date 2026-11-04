@@ -24,3 +24,18 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:name/
+  # Short updates, shown at /notes/. Not "_notes", which is the local-only drafts folder.
+  microblog:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      type: microblog
+    values:
+      layout: note
+
+feed:
+  collections:
+    microblog:
+      path: "/notes/feed.xml"
