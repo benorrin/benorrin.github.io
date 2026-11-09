@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Stop asking AI to do the job. Ask it for the tool"
+title: "Stop Asking AI to Do the Job. Ask It for the Tool"
+image: ask-ai-for-the-tool.svg
 description: "If you keep asking an AI to do the same job, you're paying for the same work every time. Get it to write a script once, then just run the script."
 categories: [AI, Automation, Productivity]
 ---

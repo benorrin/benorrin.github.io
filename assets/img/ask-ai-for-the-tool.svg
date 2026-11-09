@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" role="img" aria-labelledby="t d" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, 'DejaVu Sans Mono', monospace">
+  <title id="t">Asking AI once for a tool instead of repeating the job</title>
+  <desc id="d">The words ask AI again are crossed out and replaced with a script. Below, over four weeks, one row asks AI every week and spends tokens each time, while the other asks once for a tool and then runs it each week after.</desc>
+
+  <rect width="1000" height="490" fill="#1b1a18"/>
+
+  <!-- The swap -->
+  <text x="135" y="107" font-size="34" fill="#a8a29e" textLength="245" lengthAdjust="spacingAndGlyphs">ask AI again</text>
+  <line x1="125" y1="96" x2="390" y2="96" stroke="#f0805e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M470 96 H522" fill="none" stroke="#a8a29e" stroke-width="3"/>
+  <path d="M534 96 L518 87 V105 Z" fill="#a8a29e"/>
+  <text x="757" y="107" font-size="34" font-weight="700" fill="#f0805e" text-anchor="middle">./do-the-job.sh</text>
+
+  <line x1="45" y1="165" x2="955" y2="165" stroke="#2e2b28" stroke-width="2"/>
+
+  <!-- Week labels -->
+  <g font-size="18" fill="#a8a29e" text-anchor="middle">
+    <text x="140" y="212">week 1</text>
+    <text x="380" y="212">week 2</text>
+    <text x="620" y="212">week 3</text>
+    <text x="860" y="212">week 4</text>
+  </g>
+
+  <!-- Connectors -->
+  <g fill="none" stroke="#a8a29e" stroke-width="3">
+    <path d="M235 272 H274"/>
+    <path d="M475 272 H514"/>
+    <path d="M715 272 H754"/>
+  </g>
+  <g fill="none" stroke="#f0805e" stroke-width="3">
+    <path d="M235 390 H274"/>
+    <path d="M475 390 H514"/>
+    <path d="M715 390 H754"/>
+  </g>
+  <path d="M285 272 L271 264 V280 Z" fill="#a8a29e"/>
+  <path d="M525 272 L511 264 V280 Z" fill="#a8a29e"/>
+  <path d="M765 272 L751 264 V280 Z" fill="#a8a29e"/>
+  <path d="M285 390 L271 382 V398 Z" fill="#f0805e"/>
+  <path d="M525 390 L511 382 V398 Z" fill="#f0805e"/>
+  <path d="M765 390 L751 382 V398 Z" fill="#f0805e"/>
+
+  <!-- Asking every time -->
+  <g fill="#26241f" stroke="#3a3632" stroke-width="2">
+    <rect x="45" y="232" width="190" height="80" rx="10"/>
+    <rect x="285" y="232" width="190" height="80" rx="10"/>
+    <rect x="525" y="232" width="190" height="80" rx="10"/>
+    <rect x="765" y="232" width="190" height="80" rx="10"/>
+  </g>
+  <g font-size="24" font-weight="700" fill="#f2efec" text-anchor="middle">
+    <text x="140" y="266">ask AI</text>
+    <text x="380" y="266">ask AI</text>
+    <text x="620" y="266">ask AI</text>
+    <text x="860" y="266">ask AI</text>
+  </g>
+  <g font-size="18" fill="#a8a29e" text-anchor="middle">
+    <text x="140" y="295">tokens</text>
+    <text x="380" y="295">tokens</text>
+    <text x="620" y="295">tokens</text>
+    <text x="860" y="295">tokens</text>
+  </g>
+
+  <!-- Asking for the tool -->
+  <g fill="#26241f" stroke="#f0805e" stroke-width="2">
+    <rect x="45" y="350" width="190" height="80" rx="10"/>
+    <rect x="285" y="350" width="190" height="80" rx="10"/>
+    <rect x="525" y="350" width="190" height="80" rx="10"/>
+    <rect x="765" y="350" width="190" height="80" rx="10"/>
+  </g>
+  <g font-size="24" font-weight="700" fill="#f0805e" text-anchor="middle">
+    <text x="140" y="384">ask once</text>
+    <text x="380" y="384">run it</text>
+    <text x="620" y="384">run it</text>
+    <text x="860" y="384">run it</text>
+  </g>
+  <g font-size="18" fill="#a8a29e" text-anchor="middle">
+    <text x="140" y="413">write a script</text>
+    <text x="380" y="413">same result</text>
+    <text x="620" y="413">same result</text>
+    <text x="860" y="413">same result</text>
+  </g>
+</svg>
