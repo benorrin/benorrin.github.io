@@ -1,52 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" role="img" aria-labelledby="t d" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, 'DejaVu Sans Mono', monospace">
-  <title id="t">From a floating tag to an automated update flow</title>
-  <desc id="d">The tag uptime-kuma:latest is crossed out and replaced with uptime-kuma:2.5.9. Below it, Renovate opens a PR, which either merges itself or waits for me, then lands on main and redeploys the changed stacks.</desc>
-
-  <rect width="1000" height="490" fill="#1b1a18"/>
-
-  <!-- The tag swap -->
-  <text x="66" y="107" font-size="34" fill="#a8a29e" textLength="368" lengthAdjust="spacingAndGlyphs">uptime-kuma:latest</text>
-  <line x1="56" y1="96" x2="444" y2="96" stroke="#f0805e" stroke-width="4" stroke-linecap="round"/>
-  <path d="M470 96 H522" fill="none" stroke="#a8a29e" stroke-width="3"/>
-  <path d="M534 96 L518 87 V105 Z" fill="#a8a29e"/>
-  <text x="757" y="107" font-size="34" font-weight="700" fill="#f0805e" text-anchor="middle">uptime-kuma:2.5.9</text>
-
-  <line x1="45" y1="165" x2="955" y2="165" stroke="#2e2b28" stroke-width="2"/>
-
-  <!-- Connectors -->
-  <g fill="none" stroke="#a8a29e" stroke-width="3">
-    <path d="M235 340 H260 V280 H274"/>
-    <path d="M260 340 V400 H274" stroke="#f0805e" stroke-dasharray="7 6"/>
-    <path d="M535 280 H560 V340 H574"/>
-    <path d="M535 400 H560 V340" stroke="#f0805e" stroke-dasharray="7 6"/>
-    <path d="M715 340 H754"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" role="img" aria-label="A stack of bright shipping containers with version numbers, and one rusty container covered in cobwebs labelled latest" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, 'DejaVu Sans Mono', monospace">
+  <rect width="1000" height="490" fill="#fbe1d3"/>
+  <circle cx="860" cy="95" r="52" fill="#f0805e" opacity=".55"/>
+  <rect y="430" width="1000" height="60" fill="#44403c"/>
+  <rect x="140" y="320" width="240" height="110" fill="#3f6f7a" stroke="#1c1917" stroke-width="3"/>
+  <line x1="160" y1="328" x2="160" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="180" y1="328" x2="180" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="200" y1="328" x2="200" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="220" y1="328" x2="220" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="240" y1="328" x2="240" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="260" y1="328" x2="260" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="280" y1="328" x2="280" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="300" y1="328" x2="300" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="320" y1="328" x2="320" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="340" y1="328" x2="340" y2="422" stroke="#31575f" stroke-width="4"/>
+  <line x1="360" y1="328" x2="360" y2="422" stroke="#31575f" stroke-width="4"/>
+  <text x="260.0" y="386.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">1.30.4</text>
+  <rect x="380" y="320" width="240" height="110" fill="#e0603c" stroke="#1c1917" stroke-width="3"/>
+  <line x1="400" y1="328" x2="400" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="420" y1="328" x2="420" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="440" y1="328" x2="440" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="460" y1="328" x2="460" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="480" y1="328" x2="480" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="500" y1="328" x2="500" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="520" y1="328" x2="520" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="540" y1="328" x2="540" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="560" y1="328" x2="560" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="580" y1="328" x2="580" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <line x1="600" y1="328" x2="600" y2="422" stroke="#c24a28" stroke-width="4"/>
+  <text x="500.0" y="386.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">2.5.9</text>
+  <rect x="620" y="320" width="240" height="110" fill="#e2a64f" stroke="#1c1917" stroke-width="3"/>
+  <line x1="640" y1="328" x2="640" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="660" y1="328" x2="660" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="680" y1="328" x2="680" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="700" y1="328" x2="700" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="720" y1="328" x2="720" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="740" y1="328" x2="740" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="760" y1="328" x2="760" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="780" y1="328" x2="780" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="800" y1="328" x2="800" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="820" y1="328" x2="820" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <line x1="840" y1="328" x2="840" y2="422" stroke="#c78c37" stroke-width="4"/>
+  <text x="740.0" y="386.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">3.3.4</text>
+  <rect x="140" y="210" width="240" height="110" fill="#e2a64f" stroke="#1c1917" stroke-width="3"/>
+  <line x1="160" y1="218" x2="160" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="180" y1="218" x2="180" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="200" y1="218" x2="200" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="220" y1="218" x2="220" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="240" y1="218" x2="240" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="260" y1="218" x2="260" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="280" y1="218" x2="280" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="300" y1="218" x2="300" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="320" y1="218" x2="320" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="340" y1="218" x2="340" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <line x1="360" y1="218" x2="360" y2="312" stroke="#c78c37" stroke-width="4"/>
+  <text x="260.0" y="276.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">2.2.1</text>
+  <rect x="380" y="210" width="240" height="110" fill="#3f6f7a" stroke="#1c1917" stroke-width="3"/>
+  <line x1="400" y1="218" x2="400" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="420" y1="218" x2="420" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="440" y1="218" x2="440" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="460" y1="218" x2="460" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="480" y1="218" x2="480" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="500" y1="218" x2="500" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="520" y1="218" x2="520" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="540" y1="218" x2="540" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="560" y1="218" x2="560" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="580" y1="218" x2="580" y2="312" stroke="#31575f" stroke-width="4"/>
+  <line x1="600" y1="218" x2="600" y2="312" stroke="#31575f" stroke-width="4"/>
+  <text x="500.0" y="276.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">2.11.9</text>
+  <rect x="620" y="210" width="240" height="110" fill="#e0603c" stroke="#1c1917" stroke-width="3"/>
+  <line x1="640" y1="218" x2="640" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="660" y1="218" x2="660" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="680" y1="218" x2="680" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="700" y1="218" x2="700" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="720" y1="218" x2="720" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="740" y1="218" x2="740" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="760" y1="218" x2="760" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="780" y1="218" x2="780" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="800" y1="218" x2="800" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="820" y1="218" x2="820" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <line x1="840" y1="218" x2="840" y2="312" stroke="#c24a28" stroke-width="4"/>
+  <text x="740.0" y="276.0" font-size="32" font-weight="700" fill="#fff7f0" text-anchor="middle">1.47.0</text>
+  <rect x="380" y="100" width="240" height="110" fill="#857a6e" stroke="#1c1917" stroke-width="3"/>
+  <line x1="400" y1="108" x2="400" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="420" y1="108" x2="420" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="440" y1="108" x2="440" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="460" y1="108" x2="460" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="480" y1="108" x2="480" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="500" y1="108" x2="500" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="520" y1="108" x2="520" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="540" y1="108" x2="540" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="560" y1="108" x2="560" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="580" y1="108" x2="580" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <line x1="600" y1="108" x2="600" y2="202" stroke="#6f655b" stroke-width="4"/>
+  <text x="530" y="166" font-size="32" font-weight="700" fill="#efe7dd" text-anchor="middle">:latest</text>
+  <path d="M380 170 q14 -18 30 -6 q10 18 -4 36 h-26 z" fill="#a4532a" opacity=".85"/>
+  <path d="M560 100 q6 22 26 18 q22 -2 34 12 v-30 z" fill="#a4532a" opacity=".85"/>
+  <path d="M470 210 q10 -20 32 -12 q18 8 28 12 z" fill="#a4532a" opacity=".85"/>
+  <g fill="none" stroke="#f7f3ee" stroke-width="2" opacity=".95">
+  <line x1="380" y1="100" x2="480" y2="100"/>
+  <line x1="380" y1="100" x2="472" y2="138"/>
+  <line x1="380" y1="100" x2="450" y2="170"/>
+  <line x1="380" y1="100" x2="418" y2="192"/>
+  <line x1="380" y1="100" x2="380" y2="200"/>
+  <path d="M420 100 Q408 108 417 115 Q403 118 408 128 Q394 126 395 137 Q383 129 380 140"/>
+  <path d="M450 100 Q429 115 444 127 Q420 132 429 149 Q404 145 407 164 Q385 151 380 170"/>
+  <path d="M480 100 Q451 121 472 138 Q437 146 450 170 Q415 165 418 192 Q388 173 380 200"/>
   </g>
-  <path d="M285 280 L271 272 V288 Z" fill="#a8a29e"/>
-  <path d="M285 400 L271 392 V408 Z" fill="#f0805e"/>
-  <path d="M585 340 L571 332 V348 Z" fill="#a8a29e"/>
-  <path d="M765 340 L751 332 V348 Z" fill="#a8a29e"/>
-
-  <!-- Renovate -->
-  <rect x="45" y="295" width="190" height="90" rx="10" fill="#26241f" stroke="#3a3632" stroke-width="2"/>
-  <text x="140" y="333" font-size="24" font-weight="700" fill="#f2efec" text-anchor="middle">Renovate</text>
-  <text x="140" y="364" font-size="18" fill="#a8a29e" text-anchor="middle">opens a PR</text>
-
-  <!-- Merges itself -->
-  <rect x="285" y="235" width="250" height="90" rx="10" fill="#26241f" stroke="#3a3632" stroke-width="2"/>
-  <text x="410" y="273" font-size="24" font-weight="700" fill="#f2efec" text-anchor="middle">merges itself</text>
-  <text x="410" y="304" font-size="18" fill="#a8a29e" text-anchor="middle">patch and minor</text>
-
-  <!-- Waits for me -->
-  <rect x="285" y="355" width="250" height="90" rx="10" fill="#26241f" stroke="#f0805e" stroke-width="2"/>
-  <text x="410" y="393" font-size="24" font-weight="700" fill="#f0805e" text-anchor="middle">waits for me</text>
-  <text x="410" y="424" font-size="18" fill="#a8a29e" text-anchor="middle">major and risky</text>
-
-  <!-- main -->
-  <rect x="585" y="295" width="130" height="90" rx="10" fill="#26241f" stroke="#3a3632" stroke-width="2"/>
-  <text x="650" y="349" font-size="24" font-weight="700" fill="#f2efec" text-anchor="middle">main</text>
-
-  <!-- Redeploy -->
-  <rect x="765" y="295" width="190" height="90" rx="10" fill="#26241f" stroke="#3a3632" stroke-width="2"/>
-  <text x="860" y="333" font-size="24" font-weight="700" fill="#f2efec" text-anchor="middle">redeploy</text>
-  <text x="860" y="364" font-size="18" fill="#a8a29e" text-anchor="middle">changed stacks</text>
-</svg>
+  </svg>
